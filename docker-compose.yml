@@ -1,0 +1,33 @@
+version: "3"
+services:
+  ddagent:
+    image: datadog/agent
+    container_name: datadog-agent
+    environment:
+      - DD_APM_ENABLED=true
+      - DD_BIND_HOST=0.0.0.0
+      - DD_API_KEY=fe9dae8a95e9711d70a0a81f5ba36255
+    ports:
+      - "8126:8126"
+  app:
+    container_name: app-2
+    restart: always
+    build: .
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongo
+      - ddagent
+  mongo:
+    container_name: mongo
+    image: mongo
+#    volumes:
+#      - ./data/db:/data/db
+    ports:
+      - "27017:27017"
+    #depends_on: 
+    #  - ddagent
+  adminmongo:
+    image: "mrvautin/adminmongo"
+    ports:
+      - "1234:1234"
