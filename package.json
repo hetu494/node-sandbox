@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "name": "node-demo-v2",
-=======
   "name": "node-app-v2",
->>>>>>> 16adc31338a2807296189bfab996037ad054d0a8
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
