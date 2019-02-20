@@ -25,9 +25,3 @@ services:
 #      - ./data/db:/data/db
     ports:
       - "27017:27017"
-    #depends_on: 
-    #  - ddagent
-  adminmongo:
-    image: "mrvautin/adminmongo"
-    ports:
-      - "1234:1234"
