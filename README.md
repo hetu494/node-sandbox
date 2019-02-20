@@ -18,3 +18,6 @@ curl -X POST \
  ```
 7. You can see the data by going to `http://localhost:4000/api/contacts` from you chrome browser
 8. See traces in your account
+
+
+Remember to run `docker-compose down` to stop and remove the containers
