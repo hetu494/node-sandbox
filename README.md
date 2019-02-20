@@ -7,7 +7,7 @@
 3. Run `docker-compose build` to build the docker image
 4. Run `docker-compose up` to spin up the containers
 5. Open Chrome and hit `http://localhost:4000/api/contacts` or `http://localhost:4000/api/`
-6. User curl to add data
+6. User curl to add data (takes in 4 values: name, email, phone and gender)
 ```
 curl -X POST \
   http://localhost:4000/api/contacts/ \
