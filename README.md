@@ -1,6 +1,7 @@
 # Node.js APM Sandbox
-This is a sample node app with connection to mongoDB to troubleshoot Node.js APM issues.
-It uses express.js and routes to create endpoints.
+This is a sample node app with connection to mongoDB to troubleshoot or play around with Node.js APM.
+It uses express.js and routes to create endpoints and MongoDB to store data.
+(Note: The data is wiped everytime to destroy the containers)
 
 List of endpoints:
 1. `http://localhost:4000/` Homepage (GET)
