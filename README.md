@@ -6,7 +6,7 @@ It uses express.js and routes to create endpoints and MongoDB to store data.
 List of endpoints:
 1. `http://localhost:4000/` Homepage (GET)
 2. `http://localhost:4000/api` Sample Page (GET)
-3. `http://lochalhost:4000/api/constacts` Endpoint to post and retrieve data (GET AND POST)
+3. `http://lochalhost:4000/api/contacts` Endpoint to post and retrieve data (GET AND POST) (Includes request to MongoDB)
 
 # STEPS:
 
