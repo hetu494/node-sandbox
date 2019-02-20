@@ -1,4 +1,4 @@
-# node-sandbox
+# Node.js APM Sandbox
 This is a sample node app with connection to mongoDB to troubleshoot Node.js APM issues.
 It uses express.js and routes to create endpoints.
 
