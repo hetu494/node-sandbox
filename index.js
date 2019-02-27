@@ -1,4 +1,21 @@
-const tracer = require('dd-trace').init({debug:true, hostname: 'datadog-agent', port: 8126})
+const bunyan = require('bunyan')
+const logger = bunyan.createLogger({
+  name: 'dd-trace',
+  level: 'trace'
+}) 
+
+
+const tracer = require('dd-trace').init({
+    logger: {
+        debug: message => logger.trace(message),
+        error: err => logger.error(err)
+      },
+    //service:'new-name',
+    debug:true, 
+    logInjection: true, 
+    hostname: 'datadog-agent', 
+    port: 8126
+    })
 // Import express
 let express = require('express');
 // Import Body parser
