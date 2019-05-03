@@ -1,8 +1,15 @@
 // contactController.js
 // Import contact model
 Contact = require('./contactModel');
+const tracer = require('dd-trace')
 // Handle index actions
 exports.index = function (req, res) {
+    const span = tracer.startSpan('web.request')
+    span.setTag('tes', 'tag')
+    span.addTags({
+      'http.method': req.method,
+      'setTagTest': 'nice-tag'
+    })
     Contact.get(function (err, contacts) {
         if (err) {
             res.json({

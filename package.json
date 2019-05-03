@@ -13,6 +13,7 @@
     "bunyan": "^1.8.12",
     "dd-trace": "^0.8.0",
     "express": "^4.16.4",
-    "mongoose": "^5.4.13"
+    "mongoose": "^5.4.13",
+    "request": "^2.88.0"
   }
 }

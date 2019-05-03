@@ -5,18 +5,18 @@ const logger = bunyan.createLogger({
 }) 
 
 
+  
+
 const tracer = require('dd-trace').init({
-    logger: {
-        debug: message => logger.trace(message),
-        error: err => logger.error(err)
-      },
-    //service:'new-name',
+
+    service:'new-service-name',
+    env:`node_temp_env`,
     debug:true, 
     logInjection: true, 
     hostname: 'datadog-agent', 
     port: 8126
-    })
-// Import express
+    });
+
 let express = require('express');
 // Import Body parser
 let bodyParser = require('body-parser');
@@ -26,7 +26,7 @@ let mongoose = require('mongoose');
 let app = express();
 
 // Import routes
-let apiRoutes = require("./api-routes")
+let apiRoutes = require("./api-routes").default
 // Configure bodyparser to handle post requests
 app.use(bodyParser.urlencoded({
     extended: true

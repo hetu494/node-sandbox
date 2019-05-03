@@ -1,9 +1,5 @@
-// Filename: api-routes.js
-// Initialize express router
+const tracer = require('dd-trace')
 
-
-// api-routes.js
-// Initialize express router
 let router = require('express').Router();
 // Set default API response
 router.get('/', function (req, res) {
@@ -12,7 +8,9 @@ router.get('/', function (req, res) {
         message: 'Welcome to Node API + Tracing crafted for CAKE with love!',
     });
 });
-// Import contact controller
+
+var Request = require("request");
+
 var contactController = require('./contactController');
 // Contact routes
 router.route('/contacts')
